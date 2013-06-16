@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <RelativeLayout style="@style/lips_TactionBar">
+
+        <ImageButton
+            android:id="@+id/addline_btn_back"
+            style="@style/titleButton"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:src="@drawable/ic_back"/>
+
+        <TextView
+            android:id="@+id/addline_title"
+            android:text="@string/add_line"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/addline_btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <ImageButton
+            android:id="@+id/addline_btn_send"
+            style="@style/titleButton"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_send"/>
+
+        <Spinner
+            android:id="@+id/addline_spinner_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@+id/addline_title"
+            android:spinnerMode="dropdown"/>
+    </RelativeLayout>
+
+    <EditText android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:maxLines="8"
+              android:lines="8"
+              android:gravity="left|top"
+              android:textColor="@color/blue_light"
+              android:id="@+id/addline_content"/>
+
+</LinearLayout>

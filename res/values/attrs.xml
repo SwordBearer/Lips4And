@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="TabButton">
+        <attr name="textColorOn" format="integer" />
+        <attr name="textColorOff" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="TextLineDivider">
+        <attr name="textLineDividerText" format="integer" />
+        <attr name="textLineDividerTextColor" format="integer" />
+        <attr name="textLineDividerBg" format="integer" />
+    </declare-styleable>
+
+</resources>

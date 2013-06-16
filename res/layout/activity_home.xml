@@ -1,0 +1,37 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg" >
+
+    <xmu.swordbearer.lips.ui.tab.TationBar
+        android:id="@+id/tactionbar"
+        style="@style/lips_TactionBar"
+        android:orientation="horizontal" >
+
+        <xmu.swordbearer.lips.ui.tab.Tab
+            android:id="@+id/tab_home_search"
+            style="@style/TabButtonStyle"
+            android:layout_weight="4"
+            android:text="@string/tab_search" />
+
+        <xmu.swordbearer.lips.ui.tab.Tab
+            android:id="@+id/tab_home_logo"
+            style="@style/TabButtonStyle"
+            android:layout_weight="3"
+            android:text="@string/tab_activity" />
+
+        <xmu.swordbearer.lips.ui.tab.Tab
+            android:id="@+id/tab_home_me"
+            style="@style/TabButtonStyle"
+            android:layout_weight="4"
+            android:text="@string/tab_profile" />
+    </xmu.swordbearer.lips.ui.tab.TationBar>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tactionbar" />
+
+</RelativeLayout>

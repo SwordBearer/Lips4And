@@ -1,0 +1,7 @@
+<resources>
+
+    <dimen name="activity_horizontal_margin">12dp</dimen>
+    <dimen name="activity_vertical_margin">12dp</dimen>
+    <dimen name="signup_cell_padding">10dp</dimen>
+
+</resources>

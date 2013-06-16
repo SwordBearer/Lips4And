@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Lips</string>
+    <!-- home -->
+    <string name="tab_search">搜索</string>
+    <string name="tab_activity">动态</string>
+    <string name="tab_profile">账户</string>
+
+    <!-- login form -->
+    <string name="user_name">用户名</string>
+    <string name="user_desc">简介</string>
+    <string name="hint_user_name">你的个性名称(长度3~20)</string>
+    <string name="hint_user_desc">请用一句话描述自己</string>
+    <string name="hint_email">你的邮箱</string>
+    <string name="email_address">Email</string>
+    <string name="password">密码</string>
+    <string name="gender">性别</string>
+    <string name="genderMale">Boy</string>
+    <string name="genderFemale">Girl</string>
+    <string name="genderNo">未知</string>
+    <string name="login">登录</string>
+    <string name="login_other">其他账号登录</string>
+    <string name="signup">注册新账号</string>
+    <string name="valid_name">用户名长度介于3-20个字符</string>
+    <string name="valid_desc">个人描述最大长度为200个字符</string>
+    <string name="valid_email_syntax">非法的邮箱格式</string>
+    <string name="valid_email_size">邮箱长度介于7-30个字符</string>
+    <string name="valid_password">密码长度介于4-20个字符</string>
+    <string name="please_login">请先登录账号</string>
+    <!-- page me -->
+
+    <string name="no_desc">没有个人简介</string>
+    <string name="modify">修改</string>
+    <string name="refresh">更新</string>
+    <!-- hint -->
+    <string name="search">搜索</string>
+    <string name="divider">华丽丽的分割线</string>
+    <string name="category">分类</string>
+    <!--  -->
+    <string name="lines">美言</string>
+    <string name="followers">粉丝</string>
+    <string name="following">关注</string>
+
+    <!--add line-->
+    <string name="add_line">添加美言</string>
+
+</resources>
