@@ -36,13 +36,20 @@
     <!-- hint -->
     <string name="search">搜索</string>
     <string name="divider">华丽丽的分割线</string>
-    <string name="category">分类</string>
+    <string name="toplist">排行榜</string>
     <!--  -->
     <string name="lines">美言</string>
     <string name="followers">粉丝</string>
     <string name="following">关注</string>
 
     <!--add line-->
+    <string name="progress_send_line">正在发布中...</string>
     <string name="add_line">添加美言</string>
+    <!--user activity-->
+
+    <string name="tab_clips">语录</string>
+    <string name="tab_lines">美言</string>
+    <string name="tab_likes">收藏</string>
+    <string name="tab_about">关于</string>
 
 </resources>

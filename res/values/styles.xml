@@ -4,23 +4,41 @@
     <style name="AppTheme" parent="@android:style/Theme.Light.NoTitleBar"></style>
 
     <!-- tactionbar -->
-    <style name="lips_TactionBar">
+    <style name="BaseTactionBar">
         <item name="android:padding">0dp</item>
         <item name="android:gravity">center_vertical</item>
         <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">48dp</item>
-        <item name="android:background">@drawable/bg_tacionbar_gray</item>
+        <item name="android:layout_height">wrap_content</item>
     </style>
 
-    <style name="TabButtonStyle">
-        <item name="textColorOn">@color/tactionbar_text_selected</item>
-        <item name="textColorOff">@color/tactionbar_text</item>
-        <item name="android:textColor">@color/tactionbar_text</item>
-        <item name="android:textSize">14sp</item>
+    <style name="BaseTactionBarTab">
         <item name="android:button">@null</item>
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">fill_parent</item>
-        <item name="android:background">@drawable/selector_tab_bg</item>
+    </style>
+
+    <style name="home_TactionBar" parent="BaseTactionBar">
+        <item name="android:layout_height">48dp</item>
+        <item name="android:background">@drawable/bg_tacionbar_red</item>
+    </style>
+
+    <style name="home_TactionBarTab" parent="BaseTactionBarTab">
+        <item name="textColorOn">@color/text_white</item>
+        <item name="android:textColor">@color/text_gray</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:background">@drawable/selector_home_tab_bg</item>
+    </style>
+
+    <style name="user_TactionBar" parent="BaseTactionBar">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/bg_tacionbar_gray</item>
+    </style>
+
+    <style name="user_TactionBarTab" parent="BaseTactionBarTab">
+        <item name="textColorOn">@color/text_red</item>
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:background">@drawable/selector_user_tab_bg</item>
     </style>
 
     <style name="login_et">
@@ -44,9 +62,9 @@
         <item name="android:singleLine">true</item>
     </style>
 
-    <style name="signup_input_field" parent="@style/text_base">
+    <style name="input_field" parent="@style/text_base">
         <item name="android:textSize">14.0sp</item>
-        <item name="android:background">@drawable/selector_signup_edittext</item>
+        <item name="android:background">@drawable/selector_edittext</item>
         <item name="android:textColor">@color/text_dark</item>
     </style>
 
@@ -71,10 +89,23 @@
         <item name="android:textSize">14sp</item>
         <item name="android:padding">10dp</item>
     </style>
-<!--title button-->
+
+    <style name="listItemClip" parent="@style/text_base">
+        <item name="android:textSize">14sp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <!--title button-->
     <style name="titleButton">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">fill_parent</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
         <item name="android:background">@drawable/selector_bg_title_btn</item>
+    </style>
+
+    <style name="secondText">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/text_second</item>
     </style>
 </resources>

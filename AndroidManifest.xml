@@ -38,7 +38,6 @@
         </activity>
         <activity android:name=".activity.user.UserActivity" >
         </activity>
-
     </application>
 
 </manifest>

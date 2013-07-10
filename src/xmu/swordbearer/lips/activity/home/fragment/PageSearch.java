@@ -12,7 +12,6 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import xmu.swordbearer.lips.R;
-import xmu.swordbearer.lips.adapter.CategoryListAdapter;
 import xmu.swordbearer.lips.api.LineAPI;
 import xmu.swordbearer.lips.api.OnRequestListener;
 import xmu.swordbearer.lips.bean.Category;
@@ -29,7 +28,6 @@ public class PageSearch extends Fragment {
 
 	private ListView lv;
 	private List<xmu.swordbearer.lips.bean.Category> categories;
-	private CategoryListAdapter adapter;
 
 
 	@Override
@@ -48,8 +46,6 @@ public class PageSearch extends Fragment {
 
 
 		categories = new ArrayList<Category>();
-		adapter = new CategoryListAdapter(getActivity(), categories);
-		lv.setAdapter(adapter);
 		//
 		getCategories();
 	}
@@ -63,7 +59,6 @@ public class PageSearch extends Fragment {
 				UiHelper.showError(getActivity(), "获取分类错误");
 				break;
 			case 1:
-				adapter.notifyDataSetChanged();
 				break;
 			default:
 				super.handleMessage(msg);

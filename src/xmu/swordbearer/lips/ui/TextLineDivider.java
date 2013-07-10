@@ -1,6 +1,5 @@
 package xmu.swordbearer.lips.ui;
 
-import xmu.swordbearer.lips.R;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
@@ -8,6 +7,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import xmu.swordbearer.lips.R;
 
 public class TextLineDivider extends RelativeLayout {
 	private String _title;

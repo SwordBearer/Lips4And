@@ -5,48 +5,54 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-    <RelativeLayout style="@style/lips_TactionBar">
+    <RelativeLayout style="@style/home_TactionBar">
 
         <ImageButton
             android:id="@+id/addline_btn_back"
             style="@style/titleButton"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
+            android:background="@drawable/selector_bg_title_btn"
             android:src="@drawable/ic_back"/>
-
-        <TextView
-            android:id="@+id/addline_title"
-            android:text="@string/add_line"
-            android:layout_marginLeft="10dp"
-            android:layout_centerVertical="true"
-            android:layout_toRightOf="@id/addline_btn_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            />
 
         <ImageButton
             android:id="@+id/addline_btn_send"
             style="@style/titleButton"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
             android:layout_alignParentRight="true"
             android:src="@drawable/ic_send"/>
 
-        <Spinner
-            android:id="@+id/addline_spinner_category"
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_toRightOf="@+id/addline_title"
-            android:spinnerMode="dropdown"/>
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@id/addline_btn_send"
+            android:layout_toRightOf="@id/addline_btn_back"
+            >
+
+            <Spinner
+                android:visibility="invisible"
+                android:id="@+id/addline_spinner_category"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/spinner_bg_selector"
+                android:spinnerMode="dropdown"/>
+
+            <ImageView
+                android:id="@+id/addline_loading"
+                android:src="@drawable/loading"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"/>
+        </LinearLayout>
     </RelativeLayout>
 
-    <EditText android:layout_width="fill_parent"
-              android:layout_height="wrap_content"
-              android:maxLines="8"
-              android:lines="8"
-              android:gravity="left|top"
-              android:textColor="@color/blue_light"
-              android:id="@+id/addline_content"/>
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="left|top"
+        android:textSize="14sp"
+        android:background="@drawable/selector_textfield"
+        android:id="@+id/addline_content"/>
 
 </LinearLayout>

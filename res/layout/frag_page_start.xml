@@ -29,4 +29,10 @@
             android:text="添加美言..."/>
     </LinearLayout>
 
+    <ListView
+        android:id="@+id/frag_start_lv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="#0000"/>
+
 </LinearLayout>

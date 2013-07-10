@@ -17,9 +17,9 @@
         android:visibility="gone" />
 
     <LinearLayout
-        android:id="@+id/me_account_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/me_account_container"
         android:background="@drawable/card_bg"
         android:orientation="vertical" >
 
@@ -52,10 +52,11 @@
 
             <TextView
                 android:id="@+id/me_desc"
+                style="@style/secondText"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/me_name"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:layout_toLeftOf="@id/me_arrow_goto"
                 android:ellipsize="end"
                 android:singleLine="true"

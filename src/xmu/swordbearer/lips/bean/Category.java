@@ -10,7 +10,7 @@ import java.util.List;
 /** Created by SwordBearers on 13-6-16. */
 
 @Deprecated
-public class Category  extends BaseBean {
+public class Category extends BaseBean {
     private static final long serialVersionUID = 1L;
     //
     private long id;
@@ -36,6 +36,10 @@ public class Category  extends BaseBean {
         return cates;
     }
 
+    public static void save2Cache() {
+
+    }
+
     public String getDesc() {
         return desc;
     }
@@ -46,10 +50,6 @@ public class Category  extends BaseBean {
 
     public String getName() {
         return name;
-    }
-
-    public static void save2Cache(){
-
     }
 
 }

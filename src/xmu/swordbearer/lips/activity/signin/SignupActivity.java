@@ -11,8 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import xmu.swordbearer.lips.R;
-import xmu.swordbearer.lips.api.UserAPI;
 import xmu.swordbearer.lips.api.OnRequestListener;
+import xmu.swordbearer.lips.api.UserAPI;
 import xmu.swordbearer.lips.ui.UiHelper;
 
 public class SignupActivity extends Activity implements OnClickListener {

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+          android:id="@+id/listitem_clip_title"
+          android:text="Cagetory"
+          android:descendantFocusability="blocksDescendants"
+          style="@style/listItemClip"/>
