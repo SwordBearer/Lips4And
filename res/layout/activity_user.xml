@@ -1,64 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
 
     <LinearLayout
-        android:layout_width="fill_parent"
-        android:padding="13dp"
         android:id="@+id/user_head"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="13dp" >
 
         <TextView
             android:id="@+id/user_name"
-            android:text="@string/user_name"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:text="@string/user_name" />
 
         <TextView
             android:id="@+id/user_grade"
-            android:text="@string/user_name"
-            android:layout_width="fill_parent"
             style="@style/secondText"
-            android:layout_height="wrap_content"/>
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/user_name" />
     </LinearLayout>
 
     <View
         android:layout_width="fill_parent"
         android:layout_height="0.5dp"
-        android:background="@color/divider_gray"/>
+        android:background="@color/divider_gray" />
 
-    <xmu.swordbearer.lips.ui.tactionbar.TationBar
+    <xmu.swordbearer.lips.ui.tactionbar.TactionBar
         android:id="@+id/user_tactionbar"
         style="@style/user_TactionBar"
-        android:orientation="horizontal">
+        android:orientation="horizontal" >
 
         <xmu.swordbearer.lips.ui.tactionbar.Tab
             style="@style/user_TactionBarTab"
             android:layout_weight="1"
-            android:text="@string/tab_clips"/>
+            android:text="@string/tab_clips" />
 
         <xmu.swordbearer.lips.ui.tactionbar.Tab
             style="@style/user_TactionBarTab"
             android:layout_weight="1"
-            android:text="@string/tab_lines"/>
+            android:text="@string/tab_lines" />
 
         <xmu.swordbearer.lips.ui.tactionbar.Tab
             style="@style/user_TactionBarTab"
             android:layout_weight="1"
-            android:text="@string/tab_likes"/>
+            android:text="@string/tab_likes" />
 
         <xmu.swordbearer.lips.ui.tactionbar.Tab
             style="@style/user_TactionBarTab"
             android:layout_weight="1"
-            android:text="@string/tab_about"/>
-    </xmu.swordbearer.lips.ui.tactionbar.TationBar>
+            android:text="@string/tab_about" />
+    </xmu.swordbearer.lips.ui.tactionbar.TactionBar>
 
     <android.support.v4.view.ViewPager
         android:id="@+id/user_pager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent" />
+
 </LinearLayout>

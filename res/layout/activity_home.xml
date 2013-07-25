@@ -1,35 +1,34 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/app_bg">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg" >
 
-    <xmu.swordbearer.lips.ui.tactionbar.TationBar
+    <xmu.swordbearer.lips.ui.tactionbar.TactionBar
         android:id="@+id/home_tactionbar"
         style="@style/home_TactionBar"
-        android:orientation="horizontal">
+        android:orientation="horizontal" >
 
         <xmu.swordbearer.lips.ui.tactionbar.Tab
             style="@style/home_TactionBarTab"
             android:layout_weight="1"
-            android:text="@string/tab_activity"
-            android:checked="false"/>
+            android:checked="false"
+            android:text="@string/tab_activity" />
 
         <xmu.swordbearer.lips.ui.tactionbar.Tab
             style="@style/home_TactionBarTab"
             android:layout_weight="1"
-            android:text="@string/tab_search"/>
-
+            android:text="@string/tab_search" />
 
         <xmu.swordbearer.lips.ui.tactionbar.Tab
             style="@style/home_TactionBarTab"
             android:layout_weight="1"
-            android:text="@string/tab_profile"/>
-    </xmu.swordbearer.lips.ui.tactionbar.TationBar>
+            android:text="@string/tab_profile" />
+    </xmu.swordbearer.lips.ui.tactionbar.TactionBar>
 
     <android.support.v4.view.ViewPager
         android:id="@+id/home_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/home_tactionbar"/>
+        android:layout_below="@id/home_tactionbar" />
 
 </RelativeLayout>

@@ -30,7 +30,7 @@
     </style>
 
     <style name="user_TactionBar" parent="BaseTactionBar">
-        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_height">32dp</item>
         <item name="android:background">@drawable/bg_tacionbar_gray</item>
     </style>
 
@@ -95,7 +95,7 @@
         <item name="android:padding">10dp</item>
         <item name="android:gravity">center</item>
     </style>
-    <!--title button-->
+    <!-- title button -->
     <style name="titleButton">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">fill_parent</item>
@@ -108,4 +108,5 @@
         <item name="android:textSize">12sp</item>
         <item name="android:textColor">@color/text_second</item>
     </style>
+
 </resources>
