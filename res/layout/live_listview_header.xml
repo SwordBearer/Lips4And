@@ -1,55 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/head_contentLayout"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:background="#C0C0C0"
-    android:orientation="vertical"
-    android:padding="10dp" >
+    android:maxHeight="64dp"
+    android:padding="4dp" >
 
     <RelativeLayout
-        android:id="@+id/head_contentLayout"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" >
 
-        <LinearLayout
-            android:id="@+id/head_text_container"
+        <TextView
+            android:id="@+id/head_tipsTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:gravity="center_horizontal"
-            android:orientation="vertical" >
+            android:layout_marginLeft="10dp"
+            android:text="@string/live_listview_pull" />
 
-            <TextView
-                android:id="@+id/head_tipsTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/live_listview_pull" />
-
-            <TextView
-                android:id="@+id/head_lastUpdatedTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="10sp" />
-        </LinearLayout>
-
-        <RelativeLayout
+        <ImageView
+            android:id="@+id/head_arrowImageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
-            android:layout_toLeftOf="@id/head_text_container" >
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/head_tipsTextView"
+            android:src="@drawable/ic_pulltorefresh_arrow" />
 
-            <ImageView
-                android:id="@+id/head_arrowImageView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:src="@drawable/ic_pulltorefresh_arrow" />
-
-            <ProgressBar
-                android:id="@+id/head_progressBar"
-                style="@style/loading_light"
-                android:visibility="gone" />
-        </RelativeLayout>
+        <ProgressBar
+            android:id="@+id/head_progressBar"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/head_tipsTextView"
+            android:visibility="gone" />
     </RelativeLayout>
 
 </LinearLayout>

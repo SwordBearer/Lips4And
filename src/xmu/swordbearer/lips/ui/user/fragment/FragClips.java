@@ -1,7 +1,7 @@
 package xmu.swordbearer.lips.ui.user.fragment;
 
 import xmu.swordbearer.lips.R;
-import xmu.swordbearer.lips.api.UserAPI;
+import xmu.swordbearer.lips.application.LipsApplication;
 import xmu.swordbearer.lips.ui.BaseFragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -26,7 +26,7 @@ public class FragClips extends BaseFragment {
 		btnAddClips = (Button) rootView.findViewById(R.id.page_clips_add);
 		lvClips = (ListView) rootView.findViewById(R.id.page_clips_lv);
 		// 如果是当前用户,jiu，就显示添加按钮
-		if (UserAPI.isLogin(getActivity())) {
+		if (LipsApplication.isLogin(getActivity())) {
 		}
 	}
 

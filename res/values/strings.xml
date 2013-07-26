@@ -28,6 +28,19 @@
     <string name="valid_email_size">邮箱长度介于7-30个字符</string>
     <string name="valid_password">密码长度介于4-20个字符</string>
     <string name="please_login">请先登录账号</string>
+    <!-- toast -->
+    <string name="register_same_email">注册失败：此邮箱已经被注册，请直接登录</string>
+    <string name="register_success">注册成功</string>
+    <string name="register_error">注册失败</string>
+    <string name="login_success">登录成功</string>
+    <string name="login_error">登录失败</string>
+    <string name="login_passwd_wrong">账户密码不匹配</string>
+    <string name="network_not_avalible">网络异常，请检查网络连接...</string>
+    <string name="unknown_error">未知错误...</string>
+    <string name="not_login">错误：请先登录...</string>
+    <string name="get_account_error">获取账号信息失败</string>
+    <string name="add_line_error">添加美言失败</string>
+    <string name="add_line_success">添加美言成功</string>
     <!-- page me -->
 
     <string name="no_desc">没有个人简介</string>
@@ -42,10 +55,10 @@
     <string name="followers">粉丝</string>
     <string name="following">关注</string>
 
-    <!--add line-->
+    <!-- add line -->
     <string name="progress_send_line">正在发布中...</string>
     <string name="add_line">添加美言</string>
-    <!--user activity-->
+    <!-- user activity -->
 
     <string name="tab_clips">语录</string>
     <string name="tab_lines">美言</string>

@@ -19,8 +19,6 @@ import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.protocol.HTTP;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
@@ -36,11 +34,12 @@ public class NetHelper {
 	public static final String METHOD_ADDLINE = URI_PREFIX + "line/addline";
 	public static final String METHOD_FRIENDS_LINES = URI_PREFIX + "line/friends_lines";// 获取当前登录用户及其所关注用户的最新line
 	/* 账号相关的100起头 */
+	public static final int STATUS_UNKNOWN_ERROR = -1;// 未知错误
 	public static final int STATUS_SIGNUP_SAME = 101;// 该账号已经注册
 	public static final int STATUS_SIGNUP_ERROR = 102;// 其他注册错误
 	public static final int STATUS_SIGNUP_SUCCESS = 103;// 注册成功
-	public static final int STATUS_LOGIN_ERROR_NOUSER = 104;// 没有该账户
-	public static final int STATUS_LOGIN_ERROR_WRONG = 105;// 账户密码不匹配
+	public static final int STATUS_LOGIN_FAILED = 104;// 没有该账户
+	public static final int STATUS_LOGIN_PASSWD_WRONG = 105;// 账户密码不匹配
 	public static final int STATUS_LOGIN_SUCCESS = 106;// 登录成功
 	//
 	public static final int STATUS_GETACCOUNT_ERROR = 107;
@@ -76,7 +75,7 @@ public class NetHelper {
 	public static boolean isNetworkConnected(Context context) {
 		ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
 		NetworkInfo ni = cm.getActiveNetworkInfo();
-		return ni != null && ni.isConnectedOrConnecting();
+		return (ni != null && ni.isConnectedOrConnecting());
 	}
 
 	//
@@ -168,19 +167,4 @@ public class NetHelper {
 		return inputStream;
 		// shutdown...
 	}
-
-	/**
-	 * 下载图片
-	 * 
-	 * @param uri
-	 * @return
-	 */
-	public static Bitmap downloadImg(String uri) {
-		InputStream is = httpGet(uri);
-		if (is == null) {
-			return null;
-		}
-		return BitmapFactory.decodeStream(is);
-	}
-
 }

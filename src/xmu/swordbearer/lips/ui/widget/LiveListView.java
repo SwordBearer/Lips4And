@@ -44,7 +44,6 @@ public class LiveListView extends ListView implements OnScrollListener {
 
 	private LinearLayout headView;
 	private TextView tipsTextview;
-	private TextView lastUpdatedTextView;
 	private ImageView arrowImageView;
 	private ProgressBar headProgressBar;
 
@@ -121,7 +120,6 @@ public class LiveListView extends ListView implements OnScrollListener {
 		arrowImageView.setMinimumHeight(50);
 		headProgressBar = (ProgressBar) headView.findViewById(R.id.head_progressBar);
 		tipsTextview = (TextView) headView.findViewById(R.id.head_tipsTextView);
-		lastUpdatedTextView = (TextView) headView.findViewById(R.id.head_lastUpdatedTextView);
 
 		headContentOriginalTopPadding = headView.getPaddingTop();
 
@@ -281,7 +279,6 @@ public class LiveListView extends ListView implements OnScrollListener {
 			arrowImageView.setVisibility(View.VISIBLE);
 			headProgressBar.setVisibility(View.GONE);
 			tipsTextview.setVisibility(View.VISIBLE);
-			lastUpdatedTextView.setVisibility(View.VISIBLE);
 
 			arrowImageView.clearAnimation();
 			arrowImageView.startAnimation(animation);
@@ -294,7 +291,6 @@ public class LiveListView extends ListView implements OnScrollListener {
 
 			headProgressBar.setVisibility(View.GONE);
 			tipsTextview.setVisibility(View.VISIBLE);
-			lastUpdatedTextView.setVisibility(View.VISIBLE);
 			arrowImageView.clearAnimation();
 			arrowImageView.setVisibility(View.VISIBLE);
 			if (isBack) {
@@ -316,7 +312,6 @@ public class LiveListView extends ListView implements OnScrollListener {
 			arrowImageView.clearAnimation();
 			arrowImageView.setVisibility(View.GONE);
 			tipsTextview.setText(R.string.live_listview_loading);
-			lastUpdatedTextView.setVisibility(View.GONE);
 
 			// Log.v(TAG, "当前状态,正在刷新...");
 			break;
@@ -331,7 +326,6 @@ public class LiveListView extends ListView implements OnScrollListener {
 			arrowImageView.setImageResource(R.drawable.ic_pulltorefresh_arrow);
 
 			tipsTextview.setText(R.string.live_listview_pull);
-			lastUpdatedTextView.setVisibility(View.VISIBLE);
 
 			// Log.v(TAG, "当前状态，done");
 			break;
@@ -376,7 +370,6 @@ public class LiveListView extends ListView implements OnScrollListener {
 	}
 
 	public void onRefreshComplete(String update) {
-		lastUpdatedTextView.setText(update);
 		onRefreshComplete();
 	}
 

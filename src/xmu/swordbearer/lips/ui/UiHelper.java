@@ -1,5 +1,6 @@
 package xmu.swordbearer.lips.ui;
 
+import xmu.swordbearer.lips.R;
 import android.content.Context;
 import android.view.Gravity;
 import android.view.View;
@@ -76,18 +77,17 @@ public class UiHelper {
 	/****************** Toast *************/
 	public static void showError(Context context, int stringId) {
 		Toast toast = Toast.makeText(context, stringId, Toast.LENGTH_LONG);
-		toast.setGravity(Gravity.CENTER, 0, 0);
-		toast.show();
-	}
-
-	public static void showError(Context context, String msg) {
-		Toast toast = Toast.makeText(context, msg, Toast.LENGTH_LONG);
+		toast.getView().setBackgroundResource(R.drawable.toast_bg_info);
+		// TextView view = new TextView(context);
+		// view.setBackgroundResource(R.drawable.toast_bg_info);
+		// view.setText(stringId);
 		toast.setGravity(Gravity.CENTER, 0, 0);
 		toast.show();
 	}
 
 	public static void showInfo(Context context, int stringId) {
 		Toast toast = Toast.makeText(context, stringId, Toast.LENGTH_SHORT);
+		toast.getView().setBackgroundResource(R.drawable.toast_bg_info);
 		toast.setGravity(Gravity.CENTER, 0, 0);
 		toast.show();
 	}

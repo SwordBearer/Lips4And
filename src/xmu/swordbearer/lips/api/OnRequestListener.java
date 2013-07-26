@@ -1,8 +1,8 @@
 package xmu.swordbearer.lips.api;
 
 public interface OnRequestListener {
-    public void onError(String msg);
+	public void onError(int statusCode);
 
-    public void onComplete(Object object);
+	public void onComplete(Object object);
 
 }

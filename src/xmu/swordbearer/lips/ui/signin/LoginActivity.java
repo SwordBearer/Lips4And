@@ -4,8 +4,10 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import xmu.swordbearer.lips.R;
+import xmu.swordbearer.lips.api.NetHelper;
 import xmu.swordbearer.lips.api.OnRequestListener;
 import xmu.swordbearer.lips.api.UserAPI;
+import xmu.swordbearer.lips.application.LipsApplication;
 import xmu.swordbearer.lips.ui.UiHelper;
 import xmu.swordbearer.lips.ui.home.HomeActivity;
 import android.app.Activity;
@@ -26,39 +28,36 @@ public class LoginActivity extends Activity implements OnClickListener {
 	// 登录监听器
 	private OnRequestListener loginListener = new OnRequestListener() {
 		@Override
-		public void onError(String message) {
-			Message msg = handler.obtainMessage();
-			msg.what = 0;
-			msg.obj = message;
-			handler.sendMessage(msg);
+		public void onError(int statusCode) {
+			handler.sendEmptyMessage(statusCode);
 		}
 
 		@Override
 		public void onComplete(Object obj) {
-			Message msg = handler.obtainMessage();
-			msg.what = 1;
-			msg.obj = obj;
-			handler.sendMessage(msg);
+			try {
+				JSONObject jsonObject = (JSONObject) obj;
+				LipsApplication.saveAuthen(LoginActivity.this, jsonObject.getLong("id"), jsonObject.getString("token"));
+				handler.sendEmptyMessage(NetHelper.STATUS_LOGIN_SUCCESS);
+			} catch (JSONException e) {
+				e.printStackTrace();
+			}
 		}
 	};
 	private Handler handler = new Handler() {
 		@Override
 		public void handleMessage(Message msg) {
 			switch (msg.what) {
-			case 0:
-				UiHelper.showError(LoginActivity.this, msg.obj.toString());
+			case NetHelper.STATUS_LOGIN_FAILED:
+				UiHelper.showError(LoginActivity.this, R.string.login_error);
 				break;
-			case 1:
-				try {
-					JSONObject jsonObject = (JSONObject) msg.obj;
-					UiHelper.showError(LoginActivity.this, "登录成功 ");
-					UserAPI.saveToken(LoginActivity.this, jsonObject.getLong("id"), jsonObject.getString("token"));
-					// 登录成功，进入主页
-					startActivity(new Intent(LoginActivity.this, HomeActivity.class));
-					finish();
-				} catch (JSONException e) {
-					UiHelper.showError(LoginActivity.this, "登录失败");
-				}
+			case NetHelper.STATUS_LOGIN_PASSWD_WRONG:
+				UiHelper.showError(LoginActivity.this, R.string.login_passwd_wrong);
+				break;
+			case NetHelper.STATUS_LOGIN_SUCCESS:
+				UiHelper.showError(LoginActivity.this, R.string.login_success);
+				// 登录成功，进入主页
+				startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+				finish();
 				break;
 			}
 		}

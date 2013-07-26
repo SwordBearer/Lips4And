@@ -17,13 +17,14 @@
         android:visibility="gone" />
 
     <LinearLayout
+        android:id="@+id/me_account_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/card_bg"
         android:orientation="vertical" >
 
         <RelativeLayout
-          android:id="@+id/me_account_info"
+            android:id="@+id/me_account_info"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/touch_clear_bg"
@@ -47,8 +48,7 @@
                 android:layout_height="wrap_content"
                 android:layout_toLeftOf="@id/me_arrow_goto"
                 android:ellipsize="end"
-                android:singleLine="true"
-                android:text="用户名" />
+                android:singleLine="true" />
 
             <TextView
                 android:id="@+id/me_desc"
@@ -59,8 +59,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_toLeftOf="@id/me_arrow_goto"
                 android:ellipsize="end"
-                android:singleLine="true"
-                android:text="简介..." />
+                android:singleLine="true" />
         </RelativeLayout>
 
         <View
