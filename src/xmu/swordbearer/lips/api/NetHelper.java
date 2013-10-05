@@ -24,7 +24,7 @@ import android.net.NetworkInfo;
 
 public class NetHelper {
 	public static final String URI_PREFIX2 = "http://xlips.sinaapp.com/mobile.php/";
-	public static final String URI_PREFIX = "http://192.168.1.117/lips/mobile.php/";
+	public static final String URI_PREFIX = "http://192.168.1.102/lips/mobile.php/";
 	public static final String METHOD_SIGNUP = URI_PREFIX + "users/signup";// 注册
 	public static final String METHOD_LOGIN = URI_PREFIX + "users/login";// 登陆
 	public static final String METHOD_BRIEFINFO = URI_PREFIX + "users/briefinfo";// 用户的简要信息

@@ -46,7 +46,6 @@ public class FragStart extends BaseFragment implements View.OnClickListener {
 		View rootView = inflater.inflate(R.layout.frag_home_start, container, false);
 		initViews(rootView);
 		return rootView;
-
 	}
 
 	public void initViews(View rootView) {

@@ -8,7 +8,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 
-/** Created by SwordBearers on 13-6-13. */
+/** Created by SwordBearer on 13-6-13. */
 public class LipsApplication extends Application {
 
 	protected static final String PREF_ACCOUNT = "lips_pref_account";

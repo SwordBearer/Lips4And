@@ -18,7 +18,6 @@
             android:layout_marginLeft="@dimen/signup_cell_padding"
             android:text="@string/user_name"
             android:textStyle="bold"/>
-
         <EditText
             android:id="@+id/signup_name"
             style="@style/input_field"

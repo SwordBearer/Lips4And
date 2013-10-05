@@ -1,3 +1,3 @@
 package xmu.swordbearer.lips.api;
 
-public class ClientAPI {}
+public abstract class ClientAPI {}
